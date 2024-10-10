@@ -204,7 +204,7 @@ def compare_logs(symbol:str, date:pd.DatetimeIndex = tk.today()):
 
 def load_symbols(filename:str = 'active_symbols'):
     symbols, filename = [], filename+'.txt' if '.txt' not in filename else filename
-    path = './metadata/symbol_lists/'+filename if p.isfile('./metadata/symbol_lists/'+filename) else '../metadata/symbol_lists/'+filename
+    path = '/spindl/metadata/symbol_lists/'+filename if p.isfile('/spindl/metadata/symbol_lists/'+filename) else '/spindl/metadata/symbol_lists/'+filename
     with open(path, 'r') as f:
         for symbol in f.read().split('\n'): symbols.append(symbol)
     return symbols

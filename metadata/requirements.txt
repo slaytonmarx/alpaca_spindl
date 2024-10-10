@@ -9,3 +9,7 @@ plotly == 5.22.0
 scikit-learn == 1.5.0
 tqdm == 4.66.5
 ray == 2.37.0
+jupyter_client == 8.6.1
+jupyter_core == 5.7.2
+jupyterlab_widgets == 3.0.10
+jupyter == 1.1.1

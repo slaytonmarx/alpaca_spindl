@@ -1,4 +1,4 @@
-import sys; sys.path.append('../../..'); sys.path.append('../..')
+import sys; sys.path.append('../../..'); sys.path.append('../..'); sys.path.append('/spindl')
 import subprocess
 from os import path as p
 import json
@@ -12,7 +12,6 @@ class Config:
         self.jdict = self.read_config(filename)
         
         for key in self.jdict: setattr(self, key, self.jdict[key])
-        
 
     def read_config(self, filename:str):
         '''Reads the given config'''
@@ -32,7 +31,7 @@ class Config:
 
     def format_filename(self, filename:str):
         '''Formats the filename to the configs directory if it's being hard to find'''
-        root_path = './metadata/trade_configs' if p.isdir('./metadata/trade_configs') else '../metadata/trade_configs'
+        root_path = '/spindl/metadata/trade_configs'
         if '.json' not in filename: filename = filename+'.json'
         return p.join(root_path, filename)
     
