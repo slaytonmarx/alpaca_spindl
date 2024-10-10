@@ -51,7 +51,7 @@ def tuning(lookback_days = -1, logging:bool = False, show:bool = False, allow_ou
         try:
             if not sconfs: tickers = trader.trade_simulation(date, starting_capital=previous_amount)
             else: tickers = trader.trade_simulation(date, sconfs, starting_capital=previous_amount)
-        except FileNotFoundError: print('skipping',date); continue
+        #except FileNotFoundError: print('skipping',date); continue
         except sc.HolidayException: print('Attempted Trade on a Holiday on', date); continue
         except RoboTrader.NoProfitableSymbolsException: print('No symbols were Worth Trading on', date); continue
         # except KeyError: print('AHHH'); continue
