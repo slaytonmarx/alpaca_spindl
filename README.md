@@ -4,6 +4,7 @@ A python based platform for designing, back testing, and running trading strateg
 
 
 **Q&A**
+
 **What does Spindl stand for?**
 (Slayton Platform (for) Investment (via) Nonmanual Daytrading and Logging)
 
