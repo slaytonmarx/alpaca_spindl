@@ -1,0 +1,12 @@
+{
+      "USE_TESTING_API": false,
+      "ALLOCATION_DIVIDER": 1,
+      "WALKAWAY_PROFIT": 50,
+      "ESCAPE_PROFIT": 30000,
+      "WALKAWAY": true,
+
+      "BULLS_TO_BANK_ON": 2,
+
+      "ORDER_DIVIDER": 1,
+      "CASHOUT": true
+}

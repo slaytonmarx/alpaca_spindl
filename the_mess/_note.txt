@@ -1,0 +1,1 @@
+This directory contains around 2 years of old jupyter notebooks while I was refining the process. There's nothing of importance here, but I'm too sentimental to just get rid of them.

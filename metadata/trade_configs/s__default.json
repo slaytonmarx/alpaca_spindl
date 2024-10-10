@@ -1,0 +1,22 @@
+{
+      "ATR_FACTOR": 12,
+      
+      "ATR_SELL": 2,
+      "SECOND_SELL": 2,
+      "ATR_WINDOW": 15,
+
+      "KC_WINDOW": 60,
+      "N": 10,
+      "R": 1,
+      "CONFIDENCE": 0.4,
+
+      "RSI_WINDOW": 50,
+      "RSI_STRICTNESS": 40,
+
+      "BOL_DEV": 1,
+      "BOL_EWM": 5,
+
+      "SHORT": 9,
+      "LONG": 12,
+      "SMOOTHING": 9
+}

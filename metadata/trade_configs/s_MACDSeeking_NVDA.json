@@ -1,0 +1,7 @@
+{
+      "ATR_FACTOR": 12,
+      "ATR_SELL": 2,
+      "SHORT":9,
+      "LONG":12,
+      "SMOOTHING":9
+}
