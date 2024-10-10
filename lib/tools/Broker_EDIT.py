@@ -4,7 +4,7 @@ import logging
 
 def paper_api(no_message:bool = False):
     if not no_message: print('Activating with Paper')
-    ALPACA_KEY_ID = 'YOUR_KEY'
+    ALPACA_KEY_ID = 'YOUR_API_KEY'
     ALPACA_SECRET_KEY = 'YOUR_SECRET_KEY'
     BASE_URL = 'https://paper-api.alpaca.markets'
     api = alpaca.REST(
@@ -12,7 +12,7 @@ def paper_api(no_message:bool = False):
     return api
 
 def slack_client():
-    bot_oath = 'YOUR_SLACK_BOT_OATH'
+    bot_oath = 'YOUR_BOT_OATH'
     client = WebClient(token=bot_oath) if bot_oath != 'YOUR_SLACK_BOT_OATH' else None
     logger = logging.getLogger(__name__) if bot_oath != 'YOUR_SLACK_BOT_OATH' else None
-    return client, logger, 'YOU_CHANNEL_ID'
+    return client, logger, 'YOUR_CHANNEL_ID'
