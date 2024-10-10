@@ -1,13 +1,16 @@
 # Alpaca Spindl
 A python based platform for designing, back testing, and running trading strategies utilizing the alpaca brokerage
 
+# Installation
+`docker build . -t alpaca_spindl:1.0`
+`docker run -ti -p 15000:15000  alpaca_spindl:1.0`
 
 
 **Q&A**
 
 **What does Spindl stand for?**
 
-Slayton Platform (for) Investment (via) Nonmanual Daytrading and Logging
+Slayton's Platform (for) Investment (via) Nonmanual Daytrading and Logging
 
 **What kind of developer puts their first name in the acronym of their product?**
 
