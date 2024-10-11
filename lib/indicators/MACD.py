@@ -13,7 +13,7 @@ class MACD(Indicator):
         super().update(df)
         if not hasattr(self, 'indicator'): self.indicator = self.get_macd(self.df)
         elif self.indicator.index[-1] < self.df.index[-1]:
-            self.indicator = sc.easy_concat(self.indicator, self.get_macd(self.df[self.indicator.index[-1]-pd.DateOffset(seconds=gb.PIP_DURATION*(self.rsi_period+1)):]))
+            self.indicator = sc.easy_concat(self.indicator, self.get_macd(self.df[self.indicator.index[-1]-pd.DateOffset(seconds=60*(self.long*3)):]))
 
     def get_signal(self, index: pd.Timestamp = None):
         index = super().get_signal(index)

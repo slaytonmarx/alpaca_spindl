@@ -70,9 +70,8 @@ class BollingerSeeking(Strategy):
 
     def get_data(self, update:bool = False):
         super().get_data(update)
-        if not update:
-            self.hbol = tb.get_bollinger_bands(self.data.high.ewm(span=self.sconf.BOL_EWM).mean(), num_stds=(self.sconf.BOL_DEV,0,-self.sconf.BOL_DEV))
-            self.lbol = tb.get_bollinger_bands(self.data.low.ewm(span=self.sconf.BOL_EWM).mean(), num_stds=(self.sconf.BOL_DEV,0,-self.sconf.BOL_DEV))
+        self.hbol = tb.get_bollinger_bands(self.data.high.ewm(span=self.sconf.BOL_EWM).mean(), num_stds=(self.sconf.BOL_DEV,0,-self.sconf.BOL_DEV))
+        self.lbol = tb.get_bollinger_bands(self.data.low.ewm(span=self.sconf.BOL_EWM).mean(), num_stds=(self.sconf.BOL_DEV,0,-self.sconf.BOL_DEV))
         return self.data
 
     def failsafes(self, index:pd.DatetimeIndex):
