@@ -2,7 +2,7 @@
 A python based platform for designing, back testing, and running trading strategies utilizing the alpaca brokerage
 
 # Installation
-`docker build . -t alpaca_spindl:1.0`
+`docker build . -t alpaca_spindl`
 
 `docker run -ti --volume=${PWD}/logs:/alpaca_spindl/logs  alpaca_spindl`
 
