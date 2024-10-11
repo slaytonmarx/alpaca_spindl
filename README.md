@@ -1,6 +1,8 @@
 # Alpaca Spindl
 A python based platform for designing, back testing, and running trading strategies utilizing the alpaca brokerage
 
+![Screenshot from 2024-10-11 13-12-30](https://github.com/user-attachments/assets/d9858641-eec8-40f7-bd1e-9dfc00851eb6)
+
 # Installation
 `docker build . -t alpaca_spindl`
 
