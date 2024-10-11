@@ -1,6 +1,6 @@
 from lib.RoboTrader import RoboTrader
 from lib.Selector import Selector
-from lib.strategies.MomentumSeeking import MomentumSeeking
+from lib.strategies.BollingerSeeking import BollingerSeeking
 import lib.tools.Scrivener as sc
 import pandas as pd
 
@@ -13,7 +13,7 @@ class TuningSelection(Selector):
         dates = pd.date_range(start=self.date-pd.DateOffset(days=4), end=self.date-pd.DateOffset(days=1), freq='B')
         results, final_total = [], 0
         for date in dates:
-            trader = RoboTrader(None, strategy=MomentumSeeking, symbols=[self.symbol])
+            trader = RoboTrader(None, strategy=BollingerSeeking, symbols=[self.symbol])
             try: tickers = trader.trade_simulation(date)
             except: print('skipping',date); continue
             tickers = trader.trade_simulation(date)

@@ -13,12 +13,12 @@ import os.path as p
 from lib.tools.Config import Config
 from lib.Portfolio import Portfolio
 from lib.RoboTrader import RoboTrader
-from lib.strategies.MomentumSeeking import MomentumSeeking
+from lib.strategies.BollingerSeeking import BollingerSeeking
 from lib.selectors.SimpleSelection import SimpleSelection
 from lib.selectors.TuningSelection import TuningSelection
 
 
-def tuning(lookback_days = -1, logging:bool = False, show:bool = False, allow_output:bool = True, selector=SimpleSelection, strategy=MomentumSeeking, s:pd.Timestamp = None, e:pd.Timestamp = None, keep_history:bool = False, banned_dates:list = [], sconfs:dict = {}, symbols = []):
+def tuning(lookback_days = -1, logging:bool = False, show:bool = False, allow_output:bool = True, selector=SimpleSelection, strategy=BollingerSeeking, s:pd.Timestamp = None, e:pd.Timestamp = None, keep_history:bool = False, banned_dates:list = [], sconfs:dict = {}, symbols = []):
     '''Runs a stock experiment on the given range of days. Days should be a negative number for how far back you want to look'''
     if allow_output: print(tb.logo())
 

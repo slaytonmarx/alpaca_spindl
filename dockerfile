@@ -9,13 +9,14 @@ COPY ./metadata/requirements.txt ./metadata
 
 RUN pip install --upgrade pip
 
-RUN pip3 install -r ./metadata/requirements.txt
+RUN pip3 install --no-cache-dir  -r ./metadata/requirements.txt
 
 ENV PYTHONPATH="${PYTHONPATH}:/alpaca_spindl"
 
-EXPOSE 15000
+EXPOSE 777
 
 COPY . .
 
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=777", "--no-browser", "--allow-root"]
 
-CMD ["python"]
+#CMD ["/bin/sh"]

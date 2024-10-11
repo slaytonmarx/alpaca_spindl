@@ -1,7 +1,7 @@
 from lib.Selector import Selector
 from lib.Strategy import Strategy
 from lib.Portfolio import Portfolio
-from lib.strategies.MomentumSeeking import MomentumSeeking
+from lib.strategies.BollingerSeeking import BollingerSeeking
 from lib.selectors.SimpleSelection import SimpleSelection
 from tqdm import tqdm
 import lib.tools.TimeKeeper as tk
@@ -15,7 +15,7 @@ import pandas as pd
 class RoboTrader:
     ''' Scans the stock market for stocks to enter positions. Exits positions to harvest money.
     '''
-    def __init__(self, api = None, config:Config = Config('base.json'), selector:Selector = SimpleSelection, strategy:Strategy = MomentumSeeking, symbols:list = []):
+    def __init__(self, api = None, config:Config = Config('base.json'), selector:Selector = SimpleSelection, strategy:Strategy = BollingerSeeking, symbols:list = []):
         self.api, self.port, self.config, self.selector, self.strategy, self.forced_stocks, self.run_date = api, Portfolio(api), config, selector, strategy, symbols, tk.today()
 
     def trade_cycle(self):

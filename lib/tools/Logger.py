@@ -37,7 +37,7 @@ def clear_logs(api, date:pd.DatetimeIndex, symbol:str):
 
 def parse_directory(api, date:pd.DatetimeIndex):
     '''Returns the date directory of the log file'''
-    root = 'alpaca_spindl/logs/'
+    root = '/alpaca_spindl/logs/'
     base = root+'brokerage/' if api else root+'training/'
     directory = base+str(date.year)+'-'+str(date.month).rjust(2,'0')+'-'+str(date.day).rjust(2,'0')+'-'+date.day_name()[:3]+'/'
     return directory
