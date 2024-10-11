@@ -13,10 +13,10 @@ RUN pip3 install --no-cache-dir  -r ./metadata/requirements.txt
 
 ENV PYTHONPATH="${PYTHONPATH}:/alpaca_spindl"
 
-EXPOSE 777
+EXPOSE 10000
 
 COPY . .
 
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=777", "--no-browser", "--allow-root"]
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=10000", "--no-browser", "--allow-root"]
 
 #CMD ["/bin/sh"]
