@@ -4,7 +4,7 @@ A python based platform for designing, back testing, and running trading strateg
 # Installation
 `docker build . -t alpaca_spindl:1.0`
 
-`docker run -ti -p 15000:15000  alpaca_spindl:1.0`
+`docker run -ti --volume=${PWD}/logs:/alpaca_spindl/logs  alpaca_spindl`
 
 
 **Q&A**
