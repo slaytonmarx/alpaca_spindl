@@ -2,6 +2,7 @@ from lib.Selector import Selector
 import random
 import lib.tools.Scrivener as sc
 import lib.tools.TimeKeeper as tk
+import lib.tools.Broker as br
 from lib.tools.Config import Config
 import lib.tools.Tuner as Tuner
 import importlib
@@ -21,6 +22,11 @@ class MLSelection(Selector):
         
         # Calculate lookback
         self.lookback = tk.give_n_days_ago(self.date, self.ML.DAY_LOOKBACK)
+
+        # Adds ML dates to archive to avoid excessive data pulling
+        api = br.paper_api()
+        for date in tk.get_date_range((self.date - pd.DateOffset(days=self.lookback+1)), (self.date - pd.DateOffset(days=1))):
+            sc.update_archive(self.symbol, date, api=api)
                                            
     def is_valid(self):
         '''Determines whether the symbol is worth trading today by running a regression search on it over the past n days (set in the ML config)'''
