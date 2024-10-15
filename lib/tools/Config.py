@@ -31,7 +31,7 @@ class Config:
 
     def format_filename(self, filename:str):
         '''Formats the filename to the configs directory if it's being hard to find'''
-        root_path = '/alpaca_spindl/metadata/trade_configs' if p.isfile('/alpaca_spindl/metadata/trade_configs') else './metadata/trade_configs/'
+        root_path = '/alpaca_spindl/metadata/trade_configs' if p.isdir('/alpaca_spindl/metadata/trade_configs') else './metadata/trade_configs/'
         if '.json' not in filename: filename = filename+'.json'
         return p.join(root_path, filename)
     
